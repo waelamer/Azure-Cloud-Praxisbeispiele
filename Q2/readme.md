@@ -101,8 +101,8 @@ Die Release-Pipeline umfasst die folgenden Schritte:
 4. **Bereitstellung in der Produktionsumgebung**: Nach bestandenen Unit-Tests und Genehmigung durch den Geschäftsinhaber wird der Build in der Produktionsumgebung bereitgestellt.
 
 Der Genehmigungsprozess stellt sicher, dass der Geschäftsinhaber die Bereitstellung in der Produktion manuell genehmigen muss.
-![Build Steps](../Q2/img/q2_4.png)
-![Build Steps](../Q2/img/q2_5.png)
+![Build Steps 1](../Q2/img/q2_4.png)
+![Build Steps 2](../Q2/img/q2_5.png)
 ---
 
 ## Zusammenfassung
