@@ -37,7 +37,7 @@ variable "container_name" {
 variable "policy_name" {
   description = "The name of the storage management policy"
   type        = string
-  default     = "deleteversionafter60days_policy"
+  default     = "archive-old-blobs-policy"
 }
 
 resource "azurerm_resource_group" "rg_storage" {
