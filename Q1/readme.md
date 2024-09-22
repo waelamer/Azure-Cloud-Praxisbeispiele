@@ -23,6 +23,7 @@ As per the given requirements for deploying an Azure Web App with Terraform, I'v
 4. **Variables for Configuration**:  
    The solution is highly configurable, utilizing variables for essential aspects such as `web_app_name`, `location`, and `sku_name`. This allows for easy modifications without changing the core logic of the Terraform code. The output block also returns the default hostname for the web app, which simplifies post-deployment access.
 
-Additionally, I've incorporated Application Insights for monitoring and diagnostics, which wasn't part of the original requirements but adds valuable observability features to the web app. I've also enforced HTTPS (`https_only = true`) to enhance the security of the application, even though HTTP is allowed for testing purposes.
+## Zusammenfassung
+I've incorporated Application Insights for monitoring and diagnostics, which wasn't part of the original requirements but adds valuable observability features to the web app. I've also enforced HTTPS (`https_only = true`) to enhance the security of the application, even though HTTP is allowed for testing purposes.
 
 
