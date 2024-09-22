@@ -59,11 +59,7 @@ resource "azurerm_storage_account" "storage_account" {
   account_replication_type = "LRS"
 
   blob_properties {
-    versioning_enabled = true
-
-    delete_retention_policy {
-      days = 7
-    }
+    versioning_enabled = true    
   }
 
   https_traffic_only_enabled = true
@@ -145,15 +141,13 @@ resource "azurerm_storage_management_policy" "lifecycle_policy" {
 
     filters {
       prefix_match = [var.container_name]
-      blob_types   = ["blockBlob", "appendBlob"]
+      blob_types   = ["blockBlob"]
     }
 
     actions {
-      version {
-        change_tier_to_archive_after_days_since_creation = null
-        change_tier_to_cool_after_days_since_creation    = null
-        delete_after_days_since_creation                 = 60
-      }
+      base_blob {
+        tier_to_archive_after_days_since_creation_greater_than = 60       
+      }    
     }
   }
 }
