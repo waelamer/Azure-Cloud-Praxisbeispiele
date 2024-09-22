@@ -125,5 +125,5 @@ output "sas_url" {
 Dies wird ein Azure Storage-Konto mit Blob-Verschlüsselung, ein SAS-Token, das für 1 Stunde gültig ist, und eine Lebenszyklusrichtlinie erstellen, um ältere Blobs nach 60 Tagen zu löschen.
 
 ![Arch](../Q4/img/Q4_1.jpg)
-![SAS](img/q4_2.png)
-![over](img/q4_3.png)
+![SAS](../Q4/img/q4_2.png)
+![over](../Q4/img/q4_3.png)

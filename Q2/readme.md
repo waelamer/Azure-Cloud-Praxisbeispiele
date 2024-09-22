@@ -10,7 +10,7 @@ Anforderungen:
 
 ## Lösung
 
-![Architecture](img/q2_3_1.png)
+![Architecture](../Q2/img/q2_3_1.png)
 
 Um diese Aufgabe zu erfüllen, wird der CI/CD-Prozess in zwei Teile unterteilt: Build-Pipeline und Release-Pipeline.
 
@@ -88,7 +88,7 @@ stages:
             publishLocation: 'Container'
           condition: succeeded()  # Nur ausführen, wenn alle vorherigen Schritte erfolgreich sind
 ```
-![Build Steps](img/q2_2.png)
+![Build Steps](../Q2/img/q2_2.png)
 
 
 ### 2. Release-Pipeline
@@ -101,8 +101,8 @@ Die Release-Pipeline umfasst die folgenden Schritte:
 4. **Bereitstellung in der Produktionsumgebung**: Nach bestandenen Unit-Tests und Genehmigung durch den Geschäftsinhaber wird der Build in der Produktionsumgebung bereitgestellt.
 
 Der Genehmigungsprozess stellt sicher, dass der Geschäftsinhaber die Bereitstellung in der Produktion manuell genehmigen muss.
-![Build Steps](img/q2_4.png)
-![Build Steps](img/q2_5.png)
+![Build Steps](../Q2/img/q2_4.png)
+![Build Steps](../Q2/img/q2_5.png)
 ---
 
 ## Zusammenfassung
