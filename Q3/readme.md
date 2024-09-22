@@ -10,7 +10,7 @@ Aufgabe: Erstellen Sie ein Azure Virtual Network mit Subnets und einem Network S
 
 # Antwort, Die Terraform-Konfiguration entspricht den gestellten Anforderungen:
 
-![Architecture](../Q3/img/q3_3.png)
+![Architecture](../Q3/img/Q3_3.png)
 
 1. **Virtuelles Netzwerk und Subnetze**: Zwei Subnetze (Frontend und Backend) sind korrekt im „prod“-Virtuellen Netzwerk angelegt.
 2. **Netzwerksicherheitsgruppen**: Die NSG-Regeln sind wirksam implementiert, sodass HTTP-Traffic nur zum Frontend-Subnetz erlaubt ist, während der Zugriff auf das Backend-Subnetz nur aus dem Frontend-Subnetz gestattet wird.
@@ -18,5 +18,5 @@ Aufgabe: Erstellen Sie ein Azure Virtual Network mit Subnets und einem Network S
 
 Zusammenfassend folgt die Konfiguration den Best Practices für eine sichere Netzwerkinfrastruktur und erfüllt alle gestellten Anforderungen.
 
-![NSG](../Q3/img/q3_1.png)
-![NSG](../Q3/img/q3_2.png)
+![NSG](../Q3/img/Q3_1.png)
+![NSG](../Q3/img/Q3_2.png)
