@@ -1,0 +1,70 @@
+trigger: 
+  branches:
+    include:
+      - main
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  location: 'westeurope'  
+  buildConfiguration: 'Release' 
+  webapprepo: 'https://github.com/nkathawa/Todo.git'  # GitHub repository URL for the demo web app
+
+stages:
+- stage: VALIDATE_BUILD
+  displayName: 'VALIDATE AND BUILD'  
+  jobs:
+    - job: GetWebAppSample
+      displayName: 'Get WebApp Sample from GitHub'      
+      
+      steps:
+        # Step 1: Disable automatic checkout of the current Azure DevOps repository
+        - checkout: none
+
+        # Step 2: Clone the external GitHub repository
+        - script: |
+            git clone $(webapprepo)
+          displayName: 'Clone the external Todo repository'
+
+        # Step 3: Install the .NET Core SDK version 7.x
+        - task: UseDotNet@2
+          inputs:
+            packageType: 'sdk'
+            version: '7.x'
+          displayName: 'Install .NET Core SDK'
+
+        # Step 4: Restore NuGet packages for the project
+        - script: |
+            cd Todo
+            dotnet restore
+          displayName: 'Restore NuGet packages'
+
+        # Step 5: Build the application with the specified configuration
+        - script: |
+            cd Todo
+            dotnet build --configuration $(buildConfiguration)
+          displayName: 'Build the application'
+          continueOnError: false  # Stop pipeline if the build fails
+
+        # Step 6: Run unit tests to validate the build
+        - script: |
+            cd Todo
+            dotnet test --configuration $(buildConfiguration)
+          displayName: 'Run unit tests'
+          continueOnError: false  # Stop pipeline if tests fail
+
+        # Step 7: Publish the build artifacts (only if tests and build succeed)
+        - script: |
+            cd Todo
+            dotnet publish --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)
+          displayName: 'Publish the application'
+          condition: succeeded()  # Only run if all previous steps succeed
+
+        # Step 8: Upload the published build to the artifact folder
+        - task: PublishBuildArtifacts@1
+          displayName: 'Publish build to Artifact Folder'
+          inputs:
+            PathtoPublish: '$(Build.ArtifactStagingDirectory)'  
+            ArtifactName: 'drop'  
+            publishLocation: 'Container'  
+          condition: succeeded()  # Only run if all previous steps succeed

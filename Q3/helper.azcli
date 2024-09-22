@@ -1,0 +1,14 @@
+terraform init
+terraform plan 
+terraform apply --auto-approve  
+terraform apply -destroy --auto-approve 
+
+
+terraform init
+terraform plan 
+terraform apply --auto-approve  -var-file='poc.tfvars'
+terraform apply -destroy --auto-approve  -var-file='poc.tfvars'
+
+terraform plan -out=tfplan
+terraform show -json tfplan > tfplan.json
+jq -r '.resource_changes[] | "\(.type) \(.address)"' tfplan.json

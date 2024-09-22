@@ -1,5 +1,5 @@
 # 1. Terraform-Aufgabe: Bereitstellung einer Azure Web App
-**Aufgabe: Verwenden Sie Terraform, um eine Azure Web App zu erstellen. Die Web App sollte in einem neuen Resource Group und in einem definierten Azure App Service Plan bereitgestellt werden.
+**Aufgabe 1: Verwenden Sie Terraform, um eine Azure Web App zu erstellen. Die Web App sollte in einem neuen Resource Group und in einem definierten Azure App Service Plan bereitgestellt werden.
 **
 ## Anforderungen:
 1.	Eine Resource Group muss erstellt werden.
@@ -11,7 +11,7 @@
 
 
 # 2. Azure DevOps Pipelines (ADO) Aufgabe: CI/CD Pipeline für Azure Web App
-**Aufgabe: Implementieren Sie eine vollständige CI/CD-Pipeline in Azure DevOps für eine Web-App.
+**Aufgabe 2: Implementieren Sie eine vollständige CI/CD-Pipeline in Azure DevOps für eine Web-App.
 **
 
 ## Anforderungen:
@@ -22,7 +22,7 @@
 ## [Anwtort](Q2/readme.md)
 
 # 3. Aufgabe zur Netzwerkkonfiguration: Implementierung eines virtuellen Netzwerks
-**Aufgabe: Erstellen Sie ein Azure Virtual Network mit Subnets und einem Network Security Group (NSG).
+**Aufgabe 3: Erstellen Sie ein Azure Virtual Network mit Subnets und einem Network Security Group (NSG).
 **
 
 ## Anforderungen:
@@ -36,7 +36,7 @@
 
 
 # 4. Speicheraufgabe: Erstellung eines Storage-Accounts mit Verschlüsselung und Zugriffsrichtlinien
-**Aufgabe: Konfigurieren Sie einen Azure Storage Account für ein Projekt mit spezifischen Sicherheitsanforderungen.
+**Aufgabe 4: Konfigurieren Sie einen Azure Storage Account für ein Projekt mit spezifischen Sicherheitsanforderungen.
 **
 
 ## Anforderungen:
