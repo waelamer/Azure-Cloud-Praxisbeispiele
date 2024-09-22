@@ -22,10 +22,10 @@ resource "azurerm_storage_account" "storage_account" {
   blob_properties {
     versioning_enabled = true
 
-    
   }
 
   https_traffic_only_enabled = true
+
   min_tls_version = "TLS1_2"
 
   tags = {
@@ -63,13 +63,14 @@ resource "azurerm_storage_management_policy" "lifecycle_policy" {
 
     filters {
       prefix_match = [var.container_name]
-      blob_types   = ["blockBlob", "appendBlob"]
+      blob_types   = ["blockBlob"]
     }
 
     actions {
-      version {
-        delete_after_days_since_creation = 60
-      }
+      base_blob {
+        tier_to_archive_after_days_since_creation_greater_than = 60
+       
+      }    
     }
   }
 }
