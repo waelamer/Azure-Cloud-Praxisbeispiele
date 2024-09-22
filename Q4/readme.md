@@ -8,7 +8,7 @@ Aufgabe: Konfigurieren Sie einen Azure Storage Account für ein Projekt mit spez
 3. Erstellen Sie eine Lifecycle-Policy, die ältere Blobs automatisch archiviert.
 
 # Antwort:
-Ich habe die Aufgabe mit Terraform implementiert, um das Konzept der Infrastructure as Code (IaC) zu verdeutlichen, auch wenn dies nicht explizit gefordert war. Im Folgenden finden Sie den Terraform-Code, der die gestellten Anforderungen erfüllt:
+Ich habe die Aufgabe mit Terraform implementiert, um das Konzept der Infrastructure as Code (IaC) zu verdeutlichen, auch wenn dies nicht explizit gefordert war:
 
 ## Storage Account
 ```yaml
@@ -123,3 +123,7 @@ output "sas_url" {
 ```
 
 Dies wird ein Azure Storage-Konto mit Blob-Verschlüsselung, ein SAS-Token, das für 1 Stunde gültig ist, und eine Lebenszyklusrichtlinie erstellen, um ältere Blobs nach 60 Tagen zu löschen.
+
+![Arch](img/q4_1.png)
+![SAS](img/q4_2.png)
+![over](img/q4_3.png)
