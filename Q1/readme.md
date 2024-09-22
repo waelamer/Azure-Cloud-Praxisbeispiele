@@ -8,22 +8,23 @@
 3.	Erstellen Sie eine Web App, die eine einfache Webseite hosten kann.
 4.	Die Konfiguration der App sollte von Variablen abhängen (z.B. App Name, Region).**
 
-# Antwort :
-As per the given requirements for deploying an Azure Web App with Terraform, I've ensured that the configuration covers all necessary aspects for the task.
+# Antwort:
+Gemäß den vorgegebenen Anforderungen für die Bereitstellung einer Azure Web App mit Terraform habe ich sichergestellt, dass die Konfiguration alle notwendigen Aspekte der Aufgabe abdeckt.
 
 1. **Resource Group**:  
-   I've used the `azurerm_resource_group` resource to create a new resource group dynamically, named based on the provided app name (`var.web_app_name`). The location is also configurable via the `var.location` variable, allowing flexibility in deployment regions.
+   Ich habe die Ressource `azurerm_resource_group` verwendet, um eine neue Resource Group dynamisch zu erstellen, die basierend auf dem angegebenen App-Namen (`var.web_app_name`) benannt wird. Der Standort ist ebenfalls über die Variable `var.location` konfigurierbar, was Flexibilität bei der Auswahl der Einsatzregionen ermöglicht.
 
 2. **App Service Plan (Free Tier)**:  
-   The App Service Plan is configured with the free-tier pricing model (`F1`), as specified in the task. I’ve ensured that the `os_type` is set to `Linux`, which aligns with the platform requirements. The SKU is parameterized via the `var.sku_name` variable to allow easy changes if needed.
+   Der App Service Plan ist mit dem kostenlosen Preismodell (`F1`) konfiguriert, wie in der Aufgabe gefordert. Ich habe sichergestellt, dass das `os_type` auf `Linux` gesetzt ist, was den Plattformanforderungen entspricht. Das SKU ist über die Variable `var.sku_name` parametriert, sodass bei Bedarf leicht Änderungen vorgenommen werden können.
 
 3. **Web App Hosting**:  
-   The Web App is deployed using the `azurerm_linux_web_app` resource, which is suitable for hosting a simple webpage. I've made sure that the web app settings are flexible, pulling critical values from variables like the app name, location, and service plan ID. This ensures scalability and adaptability across different environments or regions.
+   Die Web App wird mit der Ressource `azurerm_linux_web_app` bereitgestellt, die sich für das Hosting einer einfachen Webseite eignet. Ich habe sichergestellt, dass die Web-App-Einstellungen flexibel sind, indem wichtige Werte wie der App-Name, der Standort und die Serviceplan-ID aus Variablen bezogen werden. Dies gewährleistet Skalierbarkeit und Anpassungsfähigkeit in verschiedenen Umgebungen oder Regionen.
 
-4. **Variables for Configuration**:  
-   The solution is highly configurable, utilizing variables for essential aspects such as `web_app_name`, `location`, and `sku_name`. This allows for easy modifications without changing the core logic of the Terraform code. The output block also returns the default hostname for the web app, which simplifies post-deployment access.
+4. **Variablen für die Konfiguration**:  
+   Die Lösung ist hochgradig konfigurierbar, da Variablen für wesentliche Aspekte wie `web_app_name`, `location` und `sku_name` verwendet werden. Dies ermöglicht einfache Änderungen, ohne die Kernlogik des Terraform-Codes ändern zu müssen. Der Output-Block gibt auch den Standard-Hostnamen der Web-App zurück, was den Zugriff nach der Bereitstellung vereinfacht.
 
-## Zusammenfassung
-I've incorporated Application Insights for monitoring and diagnostics, which wasn't part of the original requirements but adds valuable observability features to the web app. I've also enforced HTTPS (`https_only = true`) to enhance the security of the application, even though HTTP is allowed for testing purposes.
+## Zusammenfassung:
+Ich habe zusätzlich Application Insights für Überwachung und Diagnosen integriert, was zwar nicht Teil der ursprünglichen Anforderungen war, aber wertvolle Überwachungsfunktionen für die Web-App hinzufügt. Außerdem habe ich HTTPS (`https_only = true`) erzwungen, um die Sicherheit der Anwendung zu verbessern, auch wenn HTTP für Testzwecke zugelassen ist.
+
 
 
