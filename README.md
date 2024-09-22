@@ -10,7 +10,6 @@
 ## [Anwtort](Q1/readme.md)
 
 
-
 # 2. Azure DevOps Pipelines (ADO) Aufgabe: CI/CD Pipeline für Azure Web App
 **Aufgabe: Implementieren Sie eine vollständige CI/CD-Pipeline in Azure DevOps für eine Web-App.
 **
