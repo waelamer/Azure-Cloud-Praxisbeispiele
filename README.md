@@ -19,7 +19,7 @@
 2. Stellen Sie sicher, dass die Pipeline einen Build-Prozess durchführt und anschließend die Anwendung in einer Azure Web App bereitstellt.
 3. Fügen Sie Schritte zur Durchführung von Unit-Tests und zur Bereitstellung der App im Staging und dann in der Produktionsumgebung hinzu.
 
-## [Anwtort](Q2/readme.md)
+## [Anwtort](Q2)
 
 # 3. Aufgabe zur Netzwerkkonfiguration: Implementierung eines virtuellen Netzwerks
 **Aufgabe 3: Erstellen Sie ein Azure Virtual Network mit Subnets und einem Network Security Group (NSG).
@@ -32,7 +32,7 @@
 4. Stellen Sie sicher, dass keine eingehende Verbindung zu Backend-Ressourcen möglich ist.
 
 
-## [Anwtort](Q3/readme.md)
+## [Anwtort](Q3)
 
 
 # 4. Speicheraufgabe: Erstellung eines Storage-Accounts mit Verschlüsselung und Zugriffsrichtlinien
@@ -44,4 +44,4 @@
 2. Richten Sie eine Shared Access Signature (SAS) ein, die nur für 1 Stunde gültig ist und nur Lesezugriff auf eine bestimmte Blob-Datei ermöglicht.
 3. Erstellen Sie eine Lifecycle-Policy, die ältere Blobs automatisch archiviert.
 
-## [Anwtort](Q4/readme.md)
+## [Anwtort](Q4)
