@@ -7,7 +7,7 @@
 3.	Erstellen Sie eine Web App, die eine einfache Webseite hosten kann.
 4.	Die Konfiguration der App sollte von Variablen abhängen (z.B. App Name, Region).**
 
-## [Anwtort](Q1/readme.md)
+## [Anwtort](Q1)
 
 
 # 2. Azure DevOps Pipelines (ADO) Aufgabe: CI/CD Pipeline für Azure Web App
